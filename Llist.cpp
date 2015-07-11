@@ -1,7 +1,9 @@
 #include <iostream>
-#include "Llist.h"
+#include <string>
 
 using namespace std;
+
+#include "Llist.h"
 
 int main(){
 	Llist<int> a;
@@ -14,7 +16,16 @@ int main(){
 		a.prepend(i);
 	}
 
-	for(int i = 0; i < 20; i++){
-		cout << a.getAt(i) << endl;
+	a.printList();
+
+	Llist<string> b;
+	if (b.isEmpty()){
+		cout << "list is empty" << endl;
 	}
+	b.push_back("a");	b.push_back("b");	b.push_back("c");	b.push_back("d");
+	b.prepend("e");b.prepend("f");b.prepend("g");b.prepend("h");b.prepend("i");
+	if (!b.isEmpty()){
+		cout << "list is not empty" << endl;
+	}
+	b.printList();
 }
