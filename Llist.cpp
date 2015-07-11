@@ -22,10 +22,10 @@ int main(){
 	if (b.isEmpty()){
 		cout << "list is empty" << endl;
 	}
-	b.push_back("a");	b.push_back("b");	b.push_back("c");	b.push_back("d");
-	b.prepend("e");b.prepend("f");b.prepend("g");b.prepend("h");b.prepend("i");
-	if (!b.isEmpty()){
-		cout << "list is not empty" << endl;
-	}
+	string name = "Mitesh";
+	string code = "What!?";
+	b.push_back(name);
+	b.prepend(code);
+	cout << "Number of items in list: " << b.size() << endl;
 	b.printList();
 }
