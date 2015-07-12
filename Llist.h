@@ -57,7 +57,7 @@ public:
   }
 
 	bool isEmpty(){                    //Returns if list is empty or not;
-    return (mySize > 0);
+    return (mySize <= 0);
   }
 
   T getAt(int location){
@@ -90,7 +90,9 @@ public:
     Node<T>* cur = head;
     while(cur!=NULL){
       cout << cur->value << " ";
+      cur = cur->next;
     }
+    cout << endl;
   }
 
   unsigned int size(){
