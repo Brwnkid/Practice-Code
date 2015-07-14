@@ -25,7 +25,7 @@ void putMark(int i, int j){
 }
 
 void printBoard(){
-  cout << "  1  2  3" << endl;
+  cout << "  0 1 2" << endl;
   for(int i = 0; i < BOARD_SIZE; i++){
     cout << i << " ";
     for(int j = 0; j < BOARD_SIZE; j++){
@@ -41,11 +41,15 @@ void printBoard(){
       }
     }
     if(i<2){
-      cout << "\n-+-+-\n";
+      cout << "\n  -+-+-\n";
     }
   }
+  cout << endl;
 }
 
 int main(){
-  printBoard();
+  bool win = false;
+  while(!win){
+    printBoard();
+  }
 }
